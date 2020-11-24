@@ -20,7 +20,7 @@ TOTALLOOP		          MOV R1,#10                      ;NUMBER OF TERMS TO TAKE IN
 				  VMOV.F S16,#0.5 
 				  VADD.F32 S0,S16  ;INPUT THETA
 				  VMOV.F32 S17,#0.5
-				  VMOV.F S13,S17  ;radius
+				  VADD.F S13,S17  ;radius
 		     
 				  
 		      ;Caluclation of COSx
