@@ -11,7 +11,7 @@ __main  FUNCTION
 	
 TOTALLOOP		          MOV R1,#10                      ;NUMBER OF TERMS TO TAKE IN EXPONENTIAL EXPANSION 
 		          VMOV.F S4,#1.0;   ;;;
-		          VMOV.F S3,#1.0                  ;this contains E^X value
+		          VMOV.F S3,#1.0                  
 		          VMOV.F32 S2,#1.0             
 		          VMOV.F S1,#1.0                 
 		          VMOV.F S5,#1.0
@@ -59,6 +59,8 @@ LOOP2	          VMUL.F32 S1,S1,S0
 		  CMP R1,#0
 		  BNE LOOP2  		  			
 		  ;BX lr
+		  VMOV.F32 R0,S12
+		  		BL printMsg
 		  
 		  VMUL.F32 S14,S11,S13 ;RCOS
 		  VMUL.F32 S15,S12,S13 ;RSIN
